@@ -1,0 +1,12 @@
+
+.\ocl_thr1.res: \
+    D:\c_dev\ocl_thr\ocl_thr1.rc \
+    {D:\c_dev\ocl_thr;$(INCLUDE)}ocl_thr1.dlg \
+    {D:\c_dev\ocl_thr;$(INCLUDE)}ocl_thr1.h \
+    {D:\c_dev\ocl_thr;$(INCLUDE)}boxes.ico \
+    makefile
+
+.\ocl_thr1.obj: \
+    D:\c_dev\ocl_thr\ocl_thr1.cpp \
+    {D:\c_dev\ocl_thr;$(INCLUDE);}ocl_thr1.h \
+    makefile

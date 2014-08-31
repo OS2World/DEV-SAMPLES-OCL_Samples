@@ -1,0 +1,16 @@
+Name:         ocl_con1.zip
+
+Text:         Open Class Library container sample (req. VisualAge C++)
+
+O/S:          OS/2 2.x (?) and higher, IBM C Set/++ or Visual Age C++ required
+
+Source:       included, uploaded by author
+
+Replaces:     none
+
+My name:      Stephane Charette
+
+My email:     stephane_charette@lgs.ca
+
+Proposed dir: /pub/os2/dev/cplusplus
+

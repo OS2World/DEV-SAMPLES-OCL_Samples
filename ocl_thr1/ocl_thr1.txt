@@ -1,0 +1,16 @@
+Name:         ocl_thr1.zip
+
+Text:         Open Class Library thread & timer sample (req. VisualAge C++)
+
+O/S:          OS/2 2.x (?) and higher, IBM C Set/++ or Visual Age C++ required
+
+Source:       author
+
+Replaces:     /pub/os2/dev/cplusplus/ocl_thr1.zip
+
+My name:      Stephane Charette
+
+My email:     stephane_charette@lgs.ca
+
+Proposed dir: /pub/os2/dev/cplusplus
+

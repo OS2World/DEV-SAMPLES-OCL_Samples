@@ -1,0 +1,49 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..cpp .obj .rc .res 
+:TARGET.all
+:DEPENDENCY.
+.\ocl_ani1.exe
+:RULE..rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r %s %|dpfF.RES
+:RULE.{d:\c_dev\be_ball}.rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r %s %|dpfF.RES
+:RULE..cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:RULE.{d:\c_dev\be_ball}.cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:TARGET..\ocl_ani1.exe
+:DEPENDENCY.
+.\ocl_ani1.obj
+.\ocl_ani1.res
+makefile
+:ACTION.Link::Linker (OCL/UICL - Production)
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /optfunc"
+ /Feocl_ani1.exe 
+ .\ocl_ani1.obj
+<<
+:ACTION.Bind::Resource Bind
+:COMMAND.
+rc.exe .\ocl_ani1.res ocl_ani1.exe
+:TARGET..\ocl_ani1.res
+:DEPENDENCY.
+d:\c_dev\be_ball\ocl_ani1.rc
+{d:\c_dev\be_ball;$(INCLUDE)}ocl_ani1.dlg
+{d:\c_dev\be_ball;$(INCLUDE)}ocl_ani1.h
+{d:\c_dev\be_ball;$(INCLUDE)}cap.ico
+makefile
+:TARGET..\ocl_ani1.obj
+:DEPENDENCY.
+d:\c_dev\be_ball\ocl_ani1.cpp
+{d:\c_dev\be_ball;$(INCLUDE);}ocl_ani1.hpp
+{d:\c_dev\be_ball;$(INCLUDE);}ocl_ani1.h
+makefile

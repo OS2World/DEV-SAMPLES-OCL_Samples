@@ -1,0 +1,18 @@
+/* St‚phane Charette, scharett@vansel.alcatel.com
+ * IBM Open Class Library Container Sample
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997June21
+ */
+
+#include "ocl_con1.h"
+
+ICON  DLG_FRAME_RCID boxes.ico
+ICON  PEOPLE_RCID    people.ico
+ICON  PERSON1_RCID   person.ico
+ICON  PERSON2_RCID   person2.ico
+ICON  PERSON3_RCID   person3.ico
+ICON  PERSON4_RCID   person4.ico
+
+rcinclude ocl_con1.dlg
+
+

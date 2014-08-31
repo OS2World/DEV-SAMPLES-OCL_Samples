@@ -1,0 +1,16 @@
+Name:         ocl_con2.zip
+
+Text:         Open Class Library custom-draw container (req. VisualAge C++)
+
+O/S:          OS/2 2.x (?) and higher, Visual Age C++ required
+
+Source:       included, uploaded by author
+
+Replaces:     none
+
+My name:      Stephane Charette
+
+My email:     charette@writeme.com
+
+Proposed dir: /pub/os2/dev/cplusplus
+

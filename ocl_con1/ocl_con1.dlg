@@ -1,0 +1,21 @@
+/* St‚phane Charette, scharett@vansel.alcatel.com
+ * IBM Open Class Library Container Sample
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997June21
+ */
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "ocl_con1.h"
+
+DLGTEMPLATE DLG_FRAME_RCID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "OCL Sample - Containers (DETAILS VIEW)", DLG_FRAME_RCID, -111,
+            -45, 319, 136, FS_MOUSEALIGN, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTAINER       CONTAINER_RCID, 7, 7, 305, 122, CCS_SINGLESEL |
+                        CCS_AUTOPOSITION | CCS_READONLY | WS_GROUP
+    END
+END
+

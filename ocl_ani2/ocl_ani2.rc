@@ -1,0 +1,19 @@
+/* St‚phane Charette, stephane@venus.ubishops.ca
+ * IBM Open Class Library Animation Sample #2
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997July06
+ */
+
+#include "ocl_ani2.h"
+
+ICON     DLG_RCID          boxes.ico
+BITMAP   BMP_PERSON1_RCID  person1.bmp
+BITMAP   BMP_PERSON2_RCID  person2.bmp
+BITMAP   BMP_PERSON3_RCID  person3.bmp
+BITMAP   BMP_PERSON4_RCID  person4.bmp
+BITMAP   BMP_PERSON5_RCID  person5.bmp
+POINTER  PTR_MOVE_RCID     move_ptr.ptr
+
+rcinclude ocl_ani2.dlg
+
+

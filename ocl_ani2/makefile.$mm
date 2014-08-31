@@ -1,0 +1,61 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..cpp .obj .rc .res 
+:TARGET.all
+:DEPENDENCY.
+.\ocl_ani2.exe
+:RULE..rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE.{D:\c_dev\ocl_ani2}.rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE..cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:RULE.{D:\c_dev\ocl_ani2}.cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:TARGET..\ocl_ani2.exe
+:DEPENDENCY.
+.\ocl_ani2.obj
+.\person.obj
+.\application.obj
+.\ocl_ani2.res
+:ACTION.Link::Linker (OCL/UICL - Production)
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /optfunc"
+ /Feocl_ani2.exe 
+ .\ocl_ani2.obj
+ .\person.obj
+ .\application.obj
+<<
+:ACTION.Bind::Resource Bind
+:COMMAND.
+rc.exe .\ocl_ani2.res ocl_ani2.exe
+:TARGET..\ocl_ani2.res
+:DEPENDENCY.
+D:\c_dev\ocl_ani2\ocl_ani2.rc
+{D:\c_dev\ocl_ani2;$(INCLUDE)}ocl_ani2.dlg
+{D:\c_dev\ocl_ani2;$(INCLUDE)}ocl_ani2.h
+{D:\c_dev\ocl_ani2;$(INCLUDE)}move_ptr.ptr
+{D:\c_dev\ocl_ani2;$(INCLUDE)}boxes.ico
+:TARGET..\ocl_ani2.obj
+:DEPENDENCY.
+D:\c_dev\ocl_ani2\ocl_ani2.cpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h
+:TARGET..\application.obj
+:DEPENDENCY.
+D:\c_dev\ocl_ani2\application.cpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h
+:TARGET..\person.obj
+:DEPENDENCY.
+D:\c_dev\ocl_ani2\person.cpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp
+{D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h

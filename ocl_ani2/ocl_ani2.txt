@@ -1,0 +1,16 @@
+Name:         ocl_ani2.zip
+
+Text:         Open Class Library animation sample #2 (req. VisualAge C++)
+
+O/S:          OS/2 2.x (?) and higher, IBM C Set/++ or Visual Age C++ required
+
+Source:       author
+
+Replaces:     
+
+My name:      Stephane Charette
+
+My email:     stephane@venus.ubishops.ca
+
+Proposed dir: /pub/os2/dev/cplusplus
+

@@ -1,0 +1,14 @@
+/* St‚phane Charette, scharett@vansel.alcatel.com
+ * IBM Open Class Library Animation Sample
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997June19
+ */
+
+#include <os2.h>
+#include "ocl_ani1.h"
+
+ICON     DIALOG_RCID    cap.ico
+BITMAP   BMP_BALL_RCID  ocl_ani1.bmp
+
+rcinclude ocl_ani1.dlg
+

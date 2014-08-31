@@ -1,0 +1,53 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..cpp .obj .rc .res 
+:TARGET.all
+:DEPENDENCY.
+.\ocl_con1.exe
+:RULE..rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE.{d:\c_dev\ocl_con1}.rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE..cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:RULE.{d:\c_dev\ocl_con1}.cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:TARGET..\ocl_con1.exe
+:DEPENDENCY.
+.\ocl_con1.obj
+.\ocl_con1.res
+makefile
+:ACTION.Link::Linker (OCL/UICL - Production)
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /optfunc"
+ /Feocl_con1.exe 
+ .\ocl_con1.obj
+<<
+:ACTION.Bind::Resource Bind
+:COMMAND.
+rc.exe .\ocl_con1.res ocl_con1.exe
+:TARGET..\ocl_con1.res
+:DEPENDENCY.
+d:\c_dev\ocl_con1\ocl_con1.rc
+{d:\c_dev\ocl_con1;$(INCLUDE)}ocl_con1.dlg
+{d:\c_dev\ocl_con1;$(INCLUDE)}ocl_con1.h
+{d:\c_dev\ocl_con1;$(INCLUDE)}person4.ico
+{d:\c_dev\ocl_con1;$(INCLUDE)}person3.ico
+{d:\c_dev\ocl_con1;$(INCLUDE)}person2.ico
+{d:\c_dev\ocl_con1;$(INCLUDE)}person.ico
+{d:\c_dev\ocl_con1;$(INCLUDE)}people.ico
+{d:\c_dev\ocl_con1;$(INCLUDE)}boxes.ico
+makefile
+:TARGET..\ocl_con1.obj
+:DEPENDENCY.
+d:\c_dev\ocl_con1\ocl_con1.cpp
+{d:\c_dev\ocl_con1;$(INCLUDE);}ocl_con1.h
+makefile

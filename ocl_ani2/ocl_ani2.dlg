@@ -1,0 +1,21 @@
+/* St‚phane Charette, stephane@venus.ubishops.ca
+ * IBM Open Class Library Animation Sample #2
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997July06
+ */
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "ocl_ani2.h"
+
+DLGTEMPLATE DLG_RCID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "OCL - Animation Sample 2", DLG_RCID, -96, -49, 292, 172, NOT
+            FS_DLGBORDER | FS_MOUSEALIGN | FS_SIZEBORDER | WS_SYNCPAINT,
+            FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON | FCF_MAXBUTTON |
+            FCF_NOBYTEALIGN
+    BEGIN
+    END
+END
+

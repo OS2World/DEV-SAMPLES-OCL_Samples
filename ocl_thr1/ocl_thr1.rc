@@ -1,0 +1,13 @@
+/* St‚phane Charette, stephane@venus.ubishops.ca
+ * IBM Open Class Library Thread & Timer Sample
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997June24
+ */
+
+#include "ocl_thr1.h"
+
+ICON DLG_RCID boxes.ico
+
+rcinclude ocl_thr1.dlg
+
+

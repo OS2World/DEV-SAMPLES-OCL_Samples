@@ -1,0 +1,26 @@
+/* St‚phane Charette, stephane@venus.ubishops.ca
+ * IBM Open Class Library Thread & Timer Sample
+ * (using Visual Age C++ v3.0 with OS/2 v4.0)
+ * 1997June24
+ */
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "ocl_thr1.h"
+
+DLGTEMPLATE DLG_RCID PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "OCL Thread & Timer Sample", DLG_RCID, -29, -28, 232, 117,
+            FS_MOUSEALIGN | WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR |
+            FCF_MINBUTTON
+    BEGIN
+        LISTBOX         LB_RCID, 9, 6, 103, 104
+        PUSHBUTTON      "Clear Listbox", PBTN_CLEAR_RCID, 120, 6, 64, 14,
+                        WS_DISABLED
+        PUSHBUTTON      "Create Thread & Timer", PBTN_CREATE_RCID, 120, 96,
+                        104, 14, WS_DISABLED
+        PUSHBUTTON      "Delete Thread & Timer", PBTN_DELETE_RCID, 120, 80,
+                        103, 14, WS_DISABLED
+    END
+END

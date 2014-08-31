@@ -1,0 +1,22 @@
+
+.\ocl_ani2.res: \
+    D:\c_dev\ocl_ani2\ocl_ani2.rc \
+    {D:\c_dev\ocl_ani2;$(INCLUDE)}ocl_ani2.dlg \
+    {D:\c_dev\ocl_ani2;$(INCLUDE)}ocl_ani2.h \
+    {D:\c_dev\ocl_ani2;$(INCLUDE)}move_ptr.ptr \
+    {D:\c_dev\ocl_ani2;$(INCLUDE)}boxes.ico
+
+.\ocl_ani2.obj: \
+    D:\c_dev\ocl_ani2\ocl_ani2.cpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h
+
+.\application.obj: \
+    D:\c_dev\ocl_ani2\application.cpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h
+
+.\person.obj: \
+    D:\c_dev\ocl_ani2\person.cpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.hpp \
+    {D:\c_dev\ocl_ani2;$(INCLUDE);}ocl_ani2.h

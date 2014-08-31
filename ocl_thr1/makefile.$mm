@@ -1,0 +1,48 @@
+:TARGET.SUFFIXES
+:DEPENDENCY..cpp .obj .rc .res 
+:TARGET.all
+:DEPENDENCY.
+.\ocl_thr1.exe
+:RULE..rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE.{D:\c_dev\ocl_thr}.rc.res
+:ACTION.Compile::Resource Compiler
+:COMMAND.
+rc.exe -r -x2 %s %|dpfF.RES
+:RULE..cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:RULE.{D:\c_dev\ocl_thr}.cpp.obj
+:ACTION.Compile::C++ Compiler (OCL/UICL - Dynamic)
+:COMMAND.
+icc.exe /Fi /Si /O /Gm /Gd /G5 /Gu /C %s
+:TARGET..\ocl_thr1.exe
+:DEPENDENCY.
+.\ocl_thr1.obj
+.\ocl_thr1.res
+makefile
+:ACTION.Link::Linker (OCL/UICL - Production)
+:COMMAND.
+icc.exe @<<
+ /B" /exepack:2 /pmtype:pm /packd /optfunc"
+ /Feocl_thr1.exe 
+ .\ocl_thr1.obj
+<<
+:ACTION.Bind::Resource Bind
+:COMMAND.
+rc.exe .\ocl_thr1.res ocl_thr1.exe
+:TARGET..\ocl_thr1.res
+:DEPENDENCY.
+D:\c_dev\ocl_thr\ocl_thr1.rc
+{D:\c_dev\ocl_thr;$(INCLUDE)}ocl_thr1.dlg
+{D:\c_dev\ocl_thr;$(INCLUDE)}ocl_thr1.h
+{D:\c_dev\ocl_thr;$(INCLUDE)}boxes.ico
+makefile
+:TARGET..\ocl_thr1.obj
+:DEPENDENCY.
+D:\c_dev\ocl_thr\ocl_thr1.cpp
+{D:\c_dev\ocl_thr;$(INCLUDE);}ocl_thr1.h
+makefile
